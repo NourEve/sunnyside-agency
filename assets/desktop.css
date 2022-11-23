@@ -146,6 +146,32 @@ body {
   position: relative;
   padding: 0vh 5vw 5vh 8vw;
 }
+.main__section1__par2--underlined1:hover::before, .main__section1__par2--underlined2:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2.5vh;
+  left: 7vw;
+  width: 9vw;
+  height: 1vh;
+  background: #FAD400;
+  border-radius: 20%;
+  opacity: 1;
+  cursor: pointer;
+}
+.main__section1__par2--underlined2:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2.5vh;
+  left: 7vw;
+  width: 9vw;
+  height: 1vh;
+  background: #FE7766;
+  border-radius: 20%;
+  opacity: 1;
+  cursor: pointer;
+}
 .main__section1__par2--underlined1::before, .main__section1__par2--underlined2::before {
   content: "";
   display: block;
@@ -157,6 +183,7 @@ body {
   background: #FAD400;
   border-radius: 20%;
   opacity: 0.4;
+  cursor: pointer;
 }
 .main__section1__par2--underlined2::before {
   background: #FE7766;
