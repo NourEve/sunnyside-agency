@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0%;
   padding: 0%;
 }
@@ -95,7 +95,7 @@ body {
   background-image: url(images-css/image-transform.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 49.5vw;
+  width: 50vw;
   height: 80vh;
   order: 2;
 }
@@ -103,7 +103,7 @@ body {
   background-image: url(images-css/image-stand-out.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 49.5vw;
+  width: 50vw;
   height: 80vh;
   order: 3;
 }
@@ -111,7 +111,7 @@ body {
   text-align: left;
 }
 .main__section1__txt1 {
-  width: 49.5vw;
+  width: 50vw;
   height: 80vh;
   order: 1;
   padding: 0;
@@ -132,7 +132,7 @@ body {
   padding: 0vh 8vw 5vh 8vw;
 }
 .main__section1__txt2 {
-  width: 49.5vw;
+  width: 50vw;
   height: 80vh;
   order: 4;
   padding: 0;
@@ -207,13 +207,13 @@ body {
   padding: 0 10vw 0 10vw;
 }
 .main__section2--back1 {
-  width: 49.5vw;
+  width: 50vw;
   height: 80vh;
   padding: 0;
   order: 5;
 }
 .main__section2--back2 {
-  width: 49.5vw;
+  width: 50vw;
   height: 80vh;
   padding: 0;
   order: 5;
@@ -321,6 +321,47 @@ body {
   justify-content: center;
   padding-bottom: 15vh;
 }
-.footer__icons img {
-  margin: 0 2vw 0 2vw;
+.footer__icons__facebook {
+  background-image: url(images-css/iconsvert/icon-facebook.svg);
+  width: 10vw;
+  height: 3vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.footer__icons__facebook:hover {
+  background-image: url(images-css/iconsblanc/icon-facebook.svg);
+}
+.footer__icons__instagram {
+  background-image: url(images-css/iconsvert/icon-instagram.svg);
+  width: 10vw;
+  height: 3vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.footer__icons__instagram:hover {
+  background-image: url(images-css/iconsblanc/icon-instagram.svg);
+}
+.footer__icons__twitter {
+  background-image: url(images-css/iconsvert/icon-twitter.svg);
+  width: 10vw;
+  height: 3vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.footer__icons__twitter:hover {
+  background-image: url(images-css/iconsblanc/icon-twitter.svg);
+}
+.footer__icons__pinterest {
+  background-image: url(images-css/iconsvert/icon-pinterest.svg);
+  width: 10vw;
+  height: 3vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.footer__icons__pinterest:hover {
+  background-image: url(images-css/iconsblanc/icon-pinterest.svg);
 }/*# sourceMappingURL=desktop.css.map */

@@ -162,7 +162,7 @@ body {
   padding-left: 12vw;
   padding-right: 12vw;
   width: auto;
-  height: 165vh;
+  height: 180vh;
 }
 .main__article h2 {
   font-family: "Fraunces", serif;
@@ -207,7 +207,7 @@ body {
   flex-wrap: wrap;
 }
 .main__end__img--transform {
-  width: 50%;
+  width: 50vw;
   height: auto;
 }
 
@@ -248,9 +248,40 @@ body {
 }
 .footer__icons {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  padding-bottom: 15vh;
+  margin-bottom: 15vh;
+  padding: 0;
 }
-.footer__icons img {
-  margin-right: 8vw;
+.footer__icons__facebook {
+  background-image: url(images-css/iconsvert/icon-facebook.svg);
+  width: 10vw;
+  height: 3vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.footer__icons__instagram {
+  background-image: url(images-css/iconsvert/icon-instagram.svg);
+  width: 10vw;
+  height: 3vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.footer__icons__twitter {
+  background-image: url(images-css/iconsvert/icon-twitter.svg);
+  width: 10vw;
+  height: 3vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.footer__icons__pinterest {
+  background-image: url(images-css/iconsvert/icon-pinterest.svg);
+  width: 10vw;
+  height: 3vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }/*# sourceMappingURL=mobile.css.map */

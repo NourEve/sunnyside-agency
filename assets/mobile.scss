@@ -7,7 +7,6 @@ body {
     padding: 0%;
     display: flex;
     flex-direction: column;
-    //position: relative;
     overflow-x: hidden;
 }
 
@@ -168,7 +167,7 @@ body {
         padding-left: 12vw;
         padding-right: 12vw;
         width: auto;
-        height: 165vh;
+        height: 180vh;
         h2 {
             font-family: 'Fraunces', serif;
             color: #A7AAAD;
@@ -212,7 +211,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         &__img--transform {
-            width: 50%;
+            width: 50vw;
             height: auto;
         }
     }
@@ -254,10 +253,41 @@ body {
     }
     &__icons {
         display: flex;
+        flex-direction: row;
         justify-content: center;
-        padding-bottom: 15vh;
-        img {
-            margin-right: 8vw;
+        margin-bottom: 15vh;
+        padding: 0;
+        &__facebook {
+            background-image: url(images-css/iconsvert/icon-facebook.svg);
+            width: 10vw;
+            height: 3vh;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        &__instagram {
+            background-image: url(images-css/iconsvert/icon-instagram.svg);
+            width: 10vw;
+            height: 3vh;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        &__twitter {
+            background-image: url(images-css/iconsvert/icon-twitter.svg);
+            width: 10vw;
+            height: 3vh;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        &__pinterest {
+            background-image: url(images-css/iconsvert/icon-pinterest.svg);
+            width: 10vw;
+            height: 3vh;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
         }
     }
 }
