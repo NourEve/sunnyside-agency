@@ -283,6 +283,9 @@ body {
   font-size: 1.3vw;
   color: #458D7E;
 }
+.footer__nav ul a:hover {
+  color: white;
+}
 .footer__nav__contact {
   display: none;
 }

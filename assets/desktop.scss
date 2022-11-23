@@ -287,6 +287,9 @@ body {
                 font-weight: 600;
                 font-size: 1.3vw;
                 color: #458D7E;
+                &:hover {
+                    color: white;
+                }
             }
         }
         &__contact {
