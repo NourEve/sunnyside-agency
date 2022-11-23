@@ -99,7 +99,7 @@ body {
         background-image: url(images-css/image-transform.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        width: 50vw;
+        width: 49.5vw;
         height: 80vh;
         order: 2;
     }
@@ -107,14 +107,14 @@ body {
         background-image: url(images-css/image-stand-out.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        width: 50vw;
+        width: 49.5vw;
         height: 80vh;
         order: 3;
     }
     &__section1 {
         text-align: left;
         &__txt1 {
-            width: 50vw;
+            width: 49.5vw;
             height: 80vh;
             order: 1;
             padding: 0;
@@ -122,20 +122,20 @@ body {
         h2 {
             font-family: 'Fraunces', serif;
             color: #24303E;
-            font-size: 3.5vw;
+            font-size: 3.3vw;
             font-weight: 900;
-            padding: 5vh 5vw 0vh 8vw;
+            padding: 5vh 8vw 0vh 8vw;
         }
         &__par1 {
             font-family: 'Barlow', sans-serif;
             font-weight: 600;
-            font-size: 1.5vw;
+            font-size: 1.3vw;
             color: #808397;
             line-height: 5vh;
-            padding: 0vh 5vw 5vh 8vw;
+            padding: 0vh 8vw 5vh 8vw;
         }
         &__txt2 {
-            width: 50vw;
+            width: 49.5vw;
             height: 80vh;
             order: 4;
             padding: 0;
@@ -144,6 +144,7 @@ body {
             font-family: 'Fraunces', serif;
             color: #24303E;
             font-weight: 900;
+            font-size: 1vw;
             text-transform: uppercase;
             position: relative;
             padding: 0vh 5vw 5vh 8vw;
@@ -154,7 +155,7 @@ body {
             position: absolute;
             top: 2.5vh;
             left: 7vw;
-            width: 11vw;
+            width: 9vw;
             height: 1vh;
             background: #FAD400;
             border-radius: 20%;
@@ -166,18 +167,87 @@ body {
         }
     }
     &__section2 {
+        h2 {
+            font-family: 'Fraunces', serif;
+            color: #24554A;
+            font-size: 1.7vw;
+            font-weight: 900;
+            text-align: center;
+            margin-top: 0;
+            padding-top: 55vh;
+        }
+        p {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 1.1vw;
+            color: #24554A;
+            text-align: center;
+            line-height: 4vh;
+            padding: 0 10vw 0 10vw;
+        }
         &--back1 {
-            width: 50vw;
+            width: 49.5vw;
             height: 80vh;
+            padding: 0;
             order: 5;
         }
         &--back2 {
-            width: 50vw;
+            width: 49.5vw;
             height: 80vh;
+            padding: 0;
             order: 5;
         }
     }
-
+    &__article {
+        text-align: center;
+        padding-left: 12vw;
+        padding-right: 12vw;
+        width: auto;
+        height: 80vh;
+        h2 {
+            font-family: 'Fraunces', serif;
+            color: #A7AAAD;
+            font-size: 1.7vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1vw;
+            padding-top: 15vh;
+        }
+        &__3section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        &__img--transform {
+            margin-top: 4vh;
+            margin-bottom: -4vh;
+            border-radius: 50%;
+            transform: scale(0.4);
+        }
+        &__clients {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 1vw;
+            color: #5B636D;
+            margin-bottom: 5vh;
+            line-height: 4vh;
+            width: 20vw;
+            &__name {
+                font-family: 'Fraunces', serif;
+                color: #24303E;
+                font-size: 1vw;
+                font-weight: 900;
+                margin-bottom: 1vh;
+            }
+            &__job {
+                font-family: 'Barlow', sans-serif;
+                font-weight: 600;
+                font-size: 1vw;
+                color: #A7AAAD;
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 .footer {
