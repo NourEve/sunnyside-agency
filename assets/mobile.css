@@ -45,12 +45,12 @@ body {
 .header__titles h1 {
   font-family: "Fraunces", serif;
   text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1vw;
   text-align: center;
   color: #ffffff;
   font-size: 10vw;
-  font-weight: 900;
   margin: 0;
-  letter-spacing: 1vh;
   padding-bottom: 10vh;
 }
 .header__titles__arrow {
@@ -166,11 +166,11 @@ body {
 }
 .main__article h2 {
   font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1vw;
   color: #A7AAAD;
   font-size: 4vw;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1vw;
   padding-top: 5vh;
 }
 .main__article__img--transform {

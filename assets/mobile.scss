@@ -1,5 +1,36 @@
+//polices
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
 
+//mixin
+@mixin row-space-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@mixin background-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@mixin padding-main {
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+@mixin titles-main {
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1vw;
+}
+@mixin background-contain {
+    width: 10vw;
+    height: 3vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+//mise en page
 body {
     width: 100%;
     height: 100%;
@@ -12,9 +43,7 @@ body {
 
 .header {
     &__logo-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @include row-space-around;
         background-color: #3cbfff;
         padding-top: 5vh;
         margin-bottom: 0;
@@ -36,9 +65,7 @@ body {
     }
     &__titles {
         background-image: url(images-css/image-header.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        @include background-cover;
         margin-top: 0;
         margin-bottom: 0;
         padding-bottom: 40vh;
@@ -46,14 +73,11 @@ body {
         flex-direction: column;
         align-items: center;
         h1 {
-            font-family: 'Fraunces', serif;
-            text-transform: uppercase;
+            @include titles-main;
             text-align: center;
             color: #ffffff;
             font-size: 10vw;
-            font-weight: 900;
             margin: 0;
-            letter-spacing: 1vh;
             padding-bottom: 10vh;
             }
         &__arrow {
@@ -67,16 +91,13 @@ body {
     background-color: #F2F2F2;
     &__img-egg {
         background-image: url(images-css/image-transform.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        @include background-cover;
         height: 50vh;
     }
     &__section1 {
         text-align: center;
         padding-top: 6vh;
-        padding-left: 12vw;
-        padding-right: 12vw;
+        @include padding-main;
         width: auto;
         height: 70vh;
         h2 {
@@ -121,16 +142,13 @@ body {
     }
     &__img-glass {
         background-image: url(images-css/image-stand-out.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        @include background-cover;
         height: 50vh;
     }
     &__section2 {
         width: auto;
         height: 80vh;
-        padding-left: 12vw;
-        padding-right: 12vw;
+        @include padding-main;
         padding-bottom: 5vh;
         h2 {
             font-family: 'Fraunces', serif;
@@ -151,30 +169,22 @@ body {
         }
         &--back1 {
             background-image: url(images-css/image-graphic-design.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            @include background-cover;
         }
         &--back2 {
             background-image: url(images-css/image-photography.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            @include background-cover;
         }
     }
     &__article {
         text-align: center;
-        padding-left: 12vw;
-        padding-right: 12vw;
+        @include padding-main;
         width: auto;
         height: 180vh;
         h2 {
-            font-family: 'Fraunces', serif;
+            @include titles-main;
             color: #A7AAAD;
             font-size: 4vw;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1vw;
             padding-top: 5vh;
         }
         &__img--transform {
@@ -236,9 +246,7 @@ body {
         margin-bottom: 8vh;
         ul {
             list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            @include row-space-around;
             a {
                 text-decoration: none;
                 font-family: 'Barlow', sans-serif;
@@ -259,35 +267,19 @@ body {
         padding: 0;
         &__facebook {
             background-image: url(images-css/iconsvert/icon-facebook.svg);
-            width: 10vw;
-            height: 3vh;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            @include background-contain;
         }
         &__instagram {
             background-image: url(images-css/iconsvert/icon-instagram.svg);
-            width: 10vw;
-            height: 3vh;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            @include background-contain;
         }
         &__twitter {
             background-image: url(images-css/iconsvert/icon-twitter.svg);
-            width: 10vw;
-            height: 3vh;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            @include background-contain;
         }
         &__pinterest {
             background-image: url(images-css/iconsvert/icon-pinterest.svg);
-            width: 10vw;
-            height: 3vh;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            @include background-contain;
         }
     }
 }

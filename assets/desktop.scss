@@ -1,5 +1,42 @@
+//polices
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
 
+//variables
+
+//mixins
+@mixin row-space-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@mixin titles-main ($letter-spacing) {
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: $letter-spacing;
+}
+@mixin hover-before ($opacity, $background) {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2.5vh;
+    left: 7vw;
+    width: 10vw;
+    height: 1vh;
+    background: $background;
+    border-radius: 20%;
+    opacity: $opacity;
+    cursor: pointer;
+}
+@mixin background-contain {
+    width: 10vw;
+    height: 3vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+//mise en page
 body {
     width: 100vw;
     height: 100vh;
@@ -25,9 +62,7 @@ body {
     }
     &__navbar {
         ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            @include row-space-around;
             list-style-type: none;
             margin-top: 0vh;
             li {
@@ -71,14 +106,11 @@ body {
         align-items: center;
         height: 20vw;
         h1 {
-            font-family: 'Fraunces', serif;
-            text-transform: uppercase;
+            @include titles-main (1vw);
             text-align: center;
             color: #ffffff;
             font-size: 3.8vw;
-            font-weight: 900;
             margin: 0;
-            letter-spacing: 1vh;
             padding-bottom: 10vh;
             }
         &__arrow {
@@ -104,11 +136,8 @@ body {
         order: 2;
     }
     &__img-glass {
+        @extend .main__img-egg;
         background-image: url(images-css/image-stand-out.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 50vw;
-        height: 80vh;
         order: 3;
     }
     &__section1 {
@@ -135,62 +164,26 @@ body {
             padding: 0vh 8vw 5vh 8vw;
         }
         &__txt2 {
-            width: 50vw;
-            height: 80vh;
+            @extend .main__section1__txt1;
             order: 4;
-            padding: 0;
         }
         &__par2 {
-            font-family: 'Fraunces', serif;
+            @include titles-main (0);
             color: #24303E;
-            font-weight: 900;
-            font-size: 1vw;
-            text-transform: uppercase;
             position: relative;
             padding: 0vh 5vw 5vh 8vw;
             &--underlined1:hover::before{
-                content: "";
-                display: block;
-                position: absolute;
-                top: 2.5vh;
-                left: 7vw;
-                width: 9vw;
-                height: 1vh;
-                background: #FAD400;
-                border-radius: 20%;
-                opacity: 1;
-                cursor: pointer;
+                @include hover-before(1, #FAD400)
             }
             &--underlined2:hover::before {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 2.5vh;
-                left: 7vw;
-                width: 9vw;
-                height: 1vh;
-                background: #FE7766;
-                border-radius: 20%;
-                opacity: 1;
-                cursor: pointer;
+                @include hover-before(1, #FE7766)
             }
         }
         &__par2--underlined1::before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 2.5vh;
-            left: 7vw;
-            width: 9vw;
-            height: 1vh;
-            background: #FAD400;
-            border-radius: 20%;
-            opacity: 0.4;
-            cursor: pointer;
+            @include hover-before(0.4, #FAD400)
             }
         &__par2--underlined2::before {
-            @extend .main__section1__par2--underlined1;
-            background: #FE7766;
+            @include hover-before(0.4, #FE7766)
         }
     }
     &__section2 {
@@ -219,10 +212,8 @@ body {
             order: 5;
         }
         &--back2 {
-            width: 50vw;
-            height: 80vh;
-            padding: 0;
-            order: 5;
+            @extend .main__section2--back1;
+            order: 6;
         }
     }
     &__article {
@@ -232,18 +223,13 @@ body {
         width: auto;
         height: 80vh;
         h2 {
-            font-family: 'Fraunces', serif;
+            @include titles-main(1vw);
             color: #A7AAAD;
             font-size: 1.7vw;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1vw;
             padding-top: 15vh;
         }
         &__3section {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            @include row-space-around;
         }
         &__img--transform {
             margin-top: 4vh;
@@ -302,9 +288,7 @@ body {
         margin: 8vh 4vw 8vh 4vw;
         ul {
             list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            @include row-space-around;
             li{
                 padding-left: 17vw;
             }
@@ -329,44 +313,28 @@ body {
         padding-bottom: 15vh;
         &__facebook {
             background-image: url(images-css/iconsvert/icon-facebook.svg);
-            width: 10vw;
-            height: 3vh;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            @include background-contain;
             &:hover {
                 background-image: url(images-css/iconsblanc/icon-facebook.svg);
             }
         }
         &__instagram {
             background-image: url(images-css/iconsvert/icon-instagram.svg);
-            width: 10vw;
-            height: 3vh;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            @include background-contain;
             &:hover {
                 background-image: url(images-css/iconsblanc/icon-instagram.svg);
             }
         }
         &__twitter {
             background-image: url(images-css/iconsvert/icon-twitter.svg);
-            width: 10vw;
-            height: 3vh;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            @include background-contain;
             &:hover {
                 background-image: url(images-css/iconsblanc/icon-twitter.svg);
             }
         }
         &__pinterest {
             background-image: url(images-css/iconsvert/icon-pinterest.svg);
-            width: 10vw;
-            height: 3vh;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            @include background-contain;
             &:hover {
                 background-image: url(images-css/iconsblanc/icon-pinterest.svg);
             }
