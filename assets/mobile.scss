@@ -1,0 +1,285 @@
+//polices
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+//mixin
+@mixin row-space-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@mixin background-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@mixin padding-main {
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+@mixin titles-main {
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1vw;
+}
+@mixin background-contain {
+    width: 10vw;
+    height: 3vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+//mise en page
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.header {
+    &__logo-nav {
+        @include row-space-around;
+        background-color: #3cbfff;
+        padding-top: 5vh;
+        margin-bottom: 0;
+        margin-left: -10vw;
+        &__img {
+            margin-bottom: 15vh;
+            padding-bottom: -30vw;
+            width: 35vw;
+            height: auto;
+                }
+    }
+    &__navbar {
+        ul {
+            display: none;
+        }
+        img {
+            margin-right: -10vw;
+        }
+    }
+    &__titles {
+        background-image: url(images-css/image-header.jpg);
+        @include background-cover;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 40vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            @include titles-main;
+            text-align: center;
+            color: #ffffff;
+            font-size: 10vw;
+            margin: 0;
+            padding-bottom: 10vh;
+            }
+        &__arrow {
+            position: absolute;
+            top: 53vh;
+        }
+    }
+}
+
+.main {
+    background-color: #F2F2F2;
+    &__img-egg {
+        background-image: url(images-css/image-transform.jpg);
+        @include background-cover;
+        height: 50vh;
+    }
+    &__section1 {
+        text-align: center;
+        padding-top: 6vh;
+        @include padding-main;
+        width: auto;
+        height: 70vh;
+        h2 {
+            font-family: 'Fraunces', serif;
+            color: #24303E;
+            font-size: 8vw;
+            font-weight: 900;
+            margin-bottom: 8vh;
+        }
+        &__par1 {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 4.5vw;
+            color: #808397;
+            margin-bottom: 8vh;
+            line-height: 5vh;
+        }
+        &__par2 {
+            font-family: 'Fraunces', serif;
+            color: #24303E;
+            font-weight: 900;
+            margin-bottom: 8vh;
+            text-transform: uppercase;
+            position: relative;
+        }
+        &__par2--underlined1::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 2.5vh;
+            left: 20vw;
+            width: 35vw;
+            height: 1vh;
+            background: #FAD400;
+            border-radius: 20%;
+            opacity: 0.4;
+        }
+        &__par2--underlined2::before {
+            @extend .main__section1__par2--underlined1;
+            background: #FE7766;
+        }
+    }
+    &__img-glass {
+        background-image: url(images-css/image-stand-out.jpg);
+        @include background-cover;
+        height: 50vh;
+    }
+    &__section2 {
+        width: auto;
+        height: 80vh;
+        @include padding-main;
+        padding-bottom: 5vh;
+        h2 {
+            font-family: 'Fraunces', serif;
+            color: #24554A;
+            font-size: 7vw;
+            font-weight: 900;
+            text-align: center;
+            margin-top: 0;
+            padding-top: 55vh;
+        }
+        p {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 4vw;
+            color: #24554A;
+            text-align: center;
+            line-height: 4vh;
+        }
+        &--back1 {
+            background-image: url(images-css/image-graphic-design.jpg);
+            @include background-cover;
+        }
+        &--back2 {
+            background-image: url(images-css/image-photography.jpg);
+            @include background-cover;
+        }
+    }
+    &__article {
+        text-align: center;
+        @include padding-main;
+        width: auto;
+        height: 180vh;
+        h2 {
+            @include titles-main;
+            color: #A7AAAD;
+            font-size: 4vw;
+            padding-top: 5vh;
+        }
+        &__img--transform {
+            margin-top: 4vh;
+            margin-bottom: -4vh;
+            border-radius: 50%;
+            transform: scale(0.5);
+        }
+        &__clients {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 4.5vw;
+            color: #5B636D;
+            margin-bottom: 3vh;
+            line-height: 4vh;
+            &__name {
+                font-family: 'Fraunces', serif;
+                color: #24303E;
+                font-size: 4.5vw;
+                font-weight: 900;
+                margin-bottom: 1vh;
+            }
+            &__job {
+                font-family: 'Barlow', sans-serif;
+                font-weight: 600;
+                font-size: 3.5vw;
+                color: #A7AAAD;
+                margin-top: 0;
+            }
+        }
+    }
+    &__end {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__img--transform {
+            width: 50vw;
+            height: auto;
+        }
+    }
+}
+
+.footer {
+    background-color: #90D4C6;
+    width: auto;
+    height: 50vh;
+    &__img {
+        display: flex;
+        justify-content: center;
+        padding-top: 8vh;
+        &--transform {
+            width: 40vw;
+            height: auto;
+        }
+    }
+    &__nav {
+        margin-left: 0vw;
+        margin-top: 8vh;
+        margin-bottom: 8vh;
+        ul {
+            list-style-type: none;
+            @include row-space-around;
+            a {
+                text-decoration: none;
+                font-family: 'Barlow', sans-serif;
+                font-weight: 600;
+                font-size: 4.5vw;
+                color: #458D7E;
+            }
+        }
+        &__contact {
+            display: none;
+        }
+    }
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 15vh;
+        padding: 0;
+        &__facebook {
+            background-image: url(images-css/iconsvert/icon-facebook.svg);
+            @include background-contain;
+        }
+        &__instagram {
+            background-image: url(images-css/iconsvert/icon-instagram.svg);
+            @include background-contain;
+        }
+        &__twitter {
+            background-image: url(images-css/iconsvert/icon-twitter.svg);
+            @include background-contain;
+        }
+        &__pinterest {
+            background-image: url(images-css/iconsvert/icon-pinterest.svg);
+            @include background-contain;
+        }
+    }
+}
