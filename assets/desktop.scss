@@ -7,7 +7,7 @@ body {
     padding: 0%;
     display: flex;
     flex-direction: column;
-    position: relative;
+    //position: relative;
     overflow-x: hidden;
 }
 
@@ -75,31 +75,49 @@ body {
     }
     &__section1 {
         text-align: center;
-        padding-top: 4vh;
+        padding-top: 6vh;
         padding-left: 12vw;
         padding-right: 12vw;
         width: auto;
-        height: 60vh;
+        height: 70vh;
         h2 {
             font-family: 'Fraunces', serif;
             color: #24303E;
             font-size: 8vw;
             font-weight: 900;
-            margin-bottom: 5vh;
+            margin-bottom: 8vh;
         }
-        &__par1{
+        &__par1 {
             font-family: 'Barlow', sans-serif;
             font-weight: 600;
             font-size: 4.5vw;
             color: #808397;
             margin-bottom: 8vh;
+            line-height: 5vh;
         }
-        &__par2{
+        &__par2 {
             font-family: 'Fraunces', serif;
             color: #24303E;
             font-weight: 900;
-            margin-bottom: 10vh;
+            margin-bottom: 8vh;
             text-transform: uppercase;
+            position: relative;
+        }
+        &__par2--underlined1::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 2.5vh;
+            left: 20vw;
+            width: 35vw;
+            height: 1vh;
+            background: #FAD400;
+            border-radius: 20%;
+            opacity: 0.4;
+        }
+        &__par2--underlined2::before {
+            @extend .main__section1__par2--underlined1;
+            background: #FE7766;
         }
     }
     &__img-glass {
@@ -130,6 +148,7 @@ body {
             font-size: 4vw;
             color: #24554A;
             text-align: center;
+            line-height: 4vh;
         }
         &--back1 {
             background-image: url(images-css/image-graphic-design.jpg);
@@ -171,6 +190,7 @@ body {
             font-size: 4.5vw;
             color: #5B636D;
             margin-bottom: 3vh;
+            line-height: 4vh;
             &__name {
                 font-family: 'Fraunces', serif;
                 color: #24303E;
