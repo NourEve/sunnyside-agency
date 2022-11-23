@@ -207,7 +207,7 @@ body {
   flex-wrap: wrap;
 }
 .main__end__img--transform {
-  width: 50vw;
+  width: 50%;
   height: auto;
 }
 
