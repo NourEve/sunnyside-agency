@@ -1,6 +1,6 @@
 # sunnyside-agency
 ## 1er projet en solo
-**Création d'une page web en responsive (utilisation d'html, de Sass et des media queries :**   
+**Création d'une page web en responsive (utilisation d'html, de Sass et des media queries) :**   
 * par Nour Everaert ;
 * en 2 journées de travail ;
 * en date du 22 et 23 novembre 2022 ;
